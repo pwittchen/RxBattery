@@ -74,6 +74,7 @@ See [RELEASING.md](https://github.com/pwittchen/ReactiveBattery/blob/master/RELE
 
 References
 ----------
+- https://developer.android.com/training/monitoring-device-state/index.html
 - https://developer.android.com/training/monitoring-device-state/battery-monitoring.html
 - https://developer.android.com/studio/profile/battery-historian.html
 - https://stackoverflow.com/questions/3291655/get-battery-level-and-state-in-android
