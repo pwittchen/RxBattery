@@ -41,8 +41,8 @@ android {
   }
 
   compileOptions {
-    sourceCompatibility JavaVersion.VERSION_1_7
-    targetCompatibility JavaVersion.VERSION_1_7
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
   }
 }
 
@@ -53,16 +53,12 @@ jacocoAndroidUnitTestReport {
 }
 
 dependencies {
-  compile deps.rxjava2
-  compile deps.rxandroid2
-  compile deps.supportannotations
+  api deps.rxjava2
+  api deps.rxandroid2
+  implementation deps.supportannotations
 
-  testCompile deps.junit
-  testCompile deps.truth
-  testCompile deps.robolectric
-  testCompile deps.mockitocore
-}
-
-task wrapper(type: Wrapper) {
-  gradleVersion = rootProject.ext.gradleVersion
+  testImplementation deps.junit
+  testImplementation deps.truth
+  testImplementation deps.robolectric
+  testImplementation deps.mockitocore
 }

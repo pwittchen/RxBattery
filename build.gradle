@@ -1,32 +1,38 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 ext {
-  minSdkVersion = 9
-  compileSdkVersion = 25
-  buildToolsVersion = '25.0.2'
-  gradleVersion = '2.3.0'
+  minSdkVersion = 14
+  compileSdkVersion = 27
+  buildToolsVersion = '27.0.3'
+  gradleVersion = '4.4.1'
+  kotlinVersion = '1.2.51'
 }
 
-ext.deps = [rxjava2           : 'io.reactivex.rxjava2:rxjava:2.1.2',
-            rxandroid2        : 'io.reactivex.rxjava2:rxandroid:2.0.1',
-            supportannotations: 'com.android.support:support-annotations:25.3.1',
-            appcompatv7       : 'com.android.support:appcompat-v7:25.3.1',
-            constraintlayout  : 'com.android.support.constraint:constraint-layout:1.0.2',
+ext.deps = [rxjava2           : 'io.reactivex.rxjava2:rxjava:2.2.0',
+            rxandroid2        : 'io.reactivex.rxjava2:rxandroid:2.0.2',
+            supportannotations: 'com.android.support:support-annotations:27.1.1',
+            appcompatv7       : 'com.android.support:appcompat-v7:27.1.1',
+            constraintlayout  : 'com.android.support.constraint:constraint-layout:1.1.2',
             junit             : 'junit:junit:4.12',
-            truth             : 'com.google.truth:truth:0.34',
-            robolectric       : 'org.robolectric:robolectric:3.1.2',
-            mockitocore       : 'org.mockito:mockito-core:2.8.47']
+            truth             : 'com.google.truth:truth:0.42',
+            robolectric       : 'org.robolectric:robolectric:4.0-alpha-3',
+            mockitocore       : 'org.mockito:mockito-core:2.21.0']
 
 buildscript {
   repositories {
+    google()
     jcenter()
+    mavenCentral()
+    maven {
+      url 'https://plugins.gradle.org/m2/'
+    }
   }
 
   dependencies {
-    classpath 'com.android.tools.build:gradle:2.3.3'
-    classpath 'com.dicedmelon.gradle:jacoco-android:0.1.1'
-    classpath 'me.tatarka:gradle-retrolambda:3.7.0'
-
+    classpath 'com.android.tools.build:gradle:3.1.4'
+    classpath('com.dicedmelon.gradle:jacoco-android:0.1.2') {
+      exclude group: 'org.codehaus.groovy', module: 'groovy-all'
+    }
     // NOTE: Do not place your application dependencies here; they belong
     // in the individual module build.gradle files
   }
@@ -34,10 +40,19 @@ buildscript {
 
 allprojects {
   repositories {
+    google()
     jcenter()
+    mavenCentral()
+    maven {
+      url 'https://plugins.gradle.org/m2/'
+    }
   }
 }
 
 task clean(type: Delete) {
   delete rootProject.buildDir
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = rootProject.ext.gradleVersion
 }
