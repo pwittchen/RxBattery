@@ -10,19 +10,17 @@ ext {
 
 ext.deps = [ rxjava2              : 'io.reactivex.rxjava2:rxjava:2.2.0',
              rxandroid2           : 'io.reactivex.rxjava2:rxandroid:2.0.2',
-             supportannotations   : 'com.android.support:support-annotations:27.1.1',
+             supportannotations   : 'com.android.support:support-annotations:28.0.0-rc01',
              appcompatv7          : 'com.android.support:appcompat-v7:28.0.0-rc01',
              constraintlayout     : 'com.android.support.constraint:constraint-layout:1.1.2',
              junit                : 'junit:junit:4.12',
              truth                : 'com.google.truth:truth:0.42',
              robolectric          : 'org.robolectric:robolectric:4.0-alpha-3',
              mockitocore          : 'org.mockito:mockito-core:2.21.0',
-             kotlinstdlib         : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
-            ]
+             kotlinstdlib         : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
+             kotlingradleplugin   : "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion" ]
 
 buildscript {
-  ext.kotlin_version = '1.2.51'
-
   repositories {
     google()
     jcenter()
@@ -37,7 +35,6 @@ buildscript {
     classpath('com.dicedmelon.gradle:jacoco-android:0.1.2') {
       exclude group: 'org.codehaus.groovy', module: 'groovy-all'
     }
-    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     // NOTE: Do not place your application dependencies here; they belong
     // in the individual module build.gradle files
   }
