@@ -1,14 +1,18 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
   compileSdkVersion rootProject.ext.compileSdkVersion
 
   defaultConfig {
-    applicationId "com.github.pwittchen.rxbattery"
+    applicationId "com.github.pwittchen.rxbattery.app"
     minSdkVersion rootProject.ext.minSdkVersion
     targetSdkVersion rootProject.ext.compileSdkVersion
     versionCode 1
     versionName "1.0"
+
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
 
   buildTypes {
@@ -17,15 +21,11 @@ android {
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
-
-  compileOptions {
-    sourceCompatibility JavaVersion.VERSION_1_8
-    targetCompatibility JavaVersion.VERSION_1_8
-  }
 }
 
 dependencies {
   implementation project(':library')
+  implementation deps.kotlinstdlib
   implementation deps.appcompatv7
   implementation deps.constraintlayout
 }
