@@ -1,6 +1,6 @@
 RxBattery
 =========
-⚡ Android library monitoring the battery level of the device with RxJava Observables
+🔋 Android library monitoring the battery level of the device with RxJava Observables
 
 Contents
 --------
