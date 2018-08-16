@@ -19,6 +19,7 @@ ext.deps = [ rxjava2              : 'io.reactivex.rxjava2:rxjava:2.2.0',
              robolectric          : 'org.robolectric:robolectric:4.0-alpha-3',
              mockitocore          : 'org.mockito:mockito-core:2.21.0',
              detekt               : "gradle.plugin.io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.0.0.RC6-1",
+             ktlintgradle         : "gradle.plugin.org.jlleitschuh.gradle:ktlint-gradle:4.1.0",
              kotlinstdlib         : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
              kotlingradleplugin   : "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion" ]
 
