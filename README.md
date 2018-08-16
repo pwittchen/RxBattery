@@ -1,6 +1,6 @@
 RxBattery
 =========
-🔋 Android library monitoring battery of the device with RxJava
+🔋 Android library monitoring battery of the device with RxJava and RxKotlin
 
 Contents
 --------
