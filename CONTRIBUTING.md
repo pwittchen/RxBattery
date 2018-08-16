@@ -6,8 +6,8 @@ Looking for help?
 
 You have the following options:
 - Check out documentation in `README.md` file and read it carefully. It covers almost everything what is important.
-- Browse JavaDoc at http://pwittchen.github.io/ReactiveBattery/
-- [Ask the question on StackOverlow](http://stackoverflow.com/questions/ask?tags=reactivebattery).
+- Browse JavaDoc at http://pwittchen.github.io/RxBattery/
+- [Ask the question on StackOverlow](http://stackoverflow.com/questions/ask?tags=rxbattery).
 - Provide detailed information about your problem and environment and then ask the question in the new GitHub issue here.
 
 Found a bug?

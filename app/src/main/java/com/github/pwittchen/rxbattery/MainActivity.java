@@ -2,7 +2,6 @@ package com.github.pwittchen.rxbattery;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import com.github.pwittchen.reactivebattery.R;
 
 public class MainActivity extends AppCompatActivity {
 

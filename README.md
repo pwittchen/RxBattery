@@ -65,12 +65,12 @@ Reports from analysis are generated in library/build/reports/ directory.
 Changelog
 ---------
 
-See [CHANGELOG.md](https://github.com/pwittchen/ReactiveBattery/blob/master/CHANGELOG.md) file.
+See [CHANGELOG.md](https://github.com/pwittchen/RxBattery/blob/master/CHANGELOG.md) file.
 
 Releasing
 ---------
 
-See [RELEASING.md](https://github.com/pwittchen/ReactiveBattery/blob/master/RELEASING.md) file.
+See [RELEASING.md](https://github.com/pwittchen/RxBattery/blob/master/RELEASING.md) file.
 
 References
 ----------
