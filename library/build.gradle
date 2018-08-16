@@ -57,7 +57,7 @@ jacocoAndroidUnitTestReport {
 }
 
 detekt {
-  version = "1.0.0.RC6-1"
+  version = rootProject.ext.detektVersion
   profile("main") {
     input = "$projectDir"
     config = "$projectDir/detekt.yml"
