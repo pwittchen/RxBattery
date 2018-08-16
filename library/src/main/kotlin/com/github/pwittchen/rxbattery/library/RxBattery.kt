@@ -1,3 +1,10 @@
 package com.github.pwittchen.rxbattery.library
 
-class RxBattery
+import io.reactivex.Flowable
+
+class RxBattery {
+  fun observe(): Flowable<BatteryState> {
+    //TODO: implement the body
+    return Flowable.empty()
+  }
+}
