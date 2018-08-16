@@ -2,6 +2,9 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'jacoco'
 apply plugin: 'jacoco-android'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'io.gitlab.arturbosch.detekt'
 apply from: '../config/quality.gradle'
 apply from: '../maven_push.gradle'
 
@@ -41,6 +44,14 @@ android {
     }
   }
 
+  sourceSets {
+    main.java.srcDirs += 'src/main/kotlin'
+  }
+
+  lintOptions {
+    abortOnError false
+  }
+
   compileOptions {
     sourceCompatibility JavaVersion.VERSION_1_8
     targetCompatibility JavaVersion.VERSION_1_8
@@ -51,6 +62,15 @@ jacocoAndroidUnitTestReport {
   csv.enabled false
   html.enabled true
   xml.enabled true
+}
+
+detekt {
+  version = "1.0.0.RC6-1"
+  profile("main") {
+    input = "$projectDir"
+    config = "$projectDir/detekt.yml"
+    filters = ".*test.*,.*/resources/.*,.*/tmp/.*"
+  }
 }
 
 dependencies {
@@ -77,5 +97,6 @@ buildscript {
 
   dependencies {
     classpath deps.kotlingradleplugin
+    classpath deps.detekt
   }
 }
