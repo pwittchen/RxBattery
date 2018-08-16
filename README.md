@@ -25,6 +25,7 @@ Examples
 --------
 
 Exemplary Java application is located in `app-java` directory of this repository.
+
 Exemplary Kotlin application is located in `app-kotlin` directory.
 
 Download
