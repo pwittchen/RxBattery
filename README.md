@@ -24,7 +24,7 @@ TBD.
 Examples
 --------
 
-Exemplary application is located in `app` directory of this repository.
+Exemplary Java application is located in `app` directory of this repository. Application written in Kotlin is located in `app-kotlin` directory.
 
 Download
 --------
