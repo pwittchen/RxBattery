@@ -2,7 +2,7 @@ apply plugin: 'checkstyle'
 apply plugin: 'findbugs'
 apply plugin: 'pmd'
 
-// Add checkstyle, findbugs, pmd and lint to the check task.
+// Add dependencies to the 'check' gradle task.
 check.dependsOn 'checkstyle', 'findbugs', 'pmd', 'lint', 'detektCheck', 'ktlintCheck'
 
 checkstyle {
@@ -14,6 +14,7 @@ task checkstyle(type: Checkstyle) {
     configProperties.checkstyleSuppressionsPath = file("${project.rootDir}/config/quality/checkstyle/suppressions.xml").absolutePath
     source 'src'
     include '**/*.java'
+    include '**/*.kt'
     exclude '**/gen/**'
     classpath = files()
 }
@@ -27,6 +28,7 @@ task findbugs(type: FindBugs) {
 
     source 'src'
     include '**/*.java'
+    include '**/*.kt'
     exclude '**/gen/**'
 
     reports {
@@ -50,6 +52,7 @@ task pmd(type: Pmd) {
 
     source 'src'
     include '**/*.java'
+    include '**/*.kt'
     exclude '**/gen/**'
 
     reports {
