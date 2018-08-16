@@ -5,7 +5,7 @@ ext {
   compileSdkVersion = 28
   buildToolsVersion = '28'
   gradleVersion = '4.4.1'
-  kotlinVersion = '1.2.51'
+  kotlinVersion = '1.2.60'
 }
 
 ext.deps = [ rxjava2              : 'io.reactivex.rxjava2:rxjava:2.2.0',
@@ -21,6 +21,7 @@ ext.deps = [ rxjava2              : 'io.reactivex.rxjava2:rxjava:2.2.0',
              kotlingradleplugin   : "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion" ]
 
 buildscript {
+  ext.kotlin_version = '1.2.60'
   repositories {
     google()
     jcenter()
