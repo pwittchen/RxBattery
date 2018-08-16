@@ -24,7 +24,8 @@ TBD.
 Examples
 --------
 
-Exemplary Java application is located in `app` directory of this repository. Application written in Kotlin is located in `app-kotlin` directory.
+Exemplary Java application is located in `app-java` directory of this repository.
+Exemplary Kotlin application is located in `app-kotlin` directory.
 
 Download
 --------
@@ -34,7 +35,7 @@ TBD.
 Tests
 -----
 
-Tests are available in `library/src/test/java/` directory and can be executed on JVM without any emulator or Android device from Android Studio or CLI with the following command:
+Tests are available in `library/src/test/kotlin/` directory and can be executed on JVM without any emulator or Android device from Android Studio or CLI with the following command:
 
 ```
 ./gradlew test
