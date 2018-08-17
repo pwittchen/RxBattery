@@ -1,0 +1,5 @@
+$dokka.format:html
+$dokka.linkExtension:html
+
+com.github.pwittchen.rxbattery.library
+io.reactivex.android
