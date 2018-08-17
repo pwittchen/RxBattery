@@ -3,7 +3,6 @@ package com.github.pwittchen.rxbattery;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
-import com.github.pwittchen.rxbattery.library.RxBattery;
 import com.github.pwittchen.rxbattery.library.RxBatteryFactory;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;

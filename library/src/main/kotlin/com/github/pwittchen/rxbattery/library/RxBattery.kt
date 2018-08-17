@@ -45,9 +45,4 @@ class RxBattery {
       }
     }
   }
-
-  @Suppress("RedundantCompanionReference")
-  fun observe(context: Context): Flowable<BatteryState> {
-    return Companion.observe(context)
-  }
 }

@@ -8,4 +8,3 @@ data class BatteryState(
   val temperature: Int,
   val voltage: Int
 )
-//TODO #2: write method to transform integers to proper object
