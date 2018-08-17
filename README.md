@@ -55,7 +55,7 @@ data class BatteryState(
 )
 ```
 
-All `Integer` values returned by `BatteryState` object are reflected in constants of [BatteryManager](https://developer.android.com/reference/android/os/BatteryManager) class from the Android SDK.
+All `Integer` values returned by `BatteryState` object are reflected in constants of [`BatteryManager`](https://developer.android.com/reference/android/os/BatteryManager) class from the Android SDK.
 For `status` search constants with `BATTERY_STATUS_` prefix, for `plugged` - `BATTERY_PLUGGED_`, for `health` - `BATTERY_HEALTH_`, level represents values from 0 to 100%, voltage and temperature are quite descriptive names.
 
 Examples
