@@ -85,6 +85,7 @@ dependencies {
   testImplementation deps.junit
   testImplementation deps.truth
   testImplementation deps.robolectric
+  testImplementation deps.mockitokotlin
   testImplementation deps.mockitocore
 }
 

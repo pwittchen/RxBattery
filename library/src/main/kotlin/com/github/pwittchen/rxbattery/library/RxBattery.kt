@@ -24,7 +24,7 @@ class RxBattery {
         .doOnCancel { context.unregisterReceiver(receiver) }
     }
 
-    private fun createBroadcastReceiver(emitter: FlowableEmitter<BatteryState>): BroadcastReceiver {
+    fun createBroadcastReceiver(emitter: FlowableEmitter<BatteryState>): BroadcastReceiver {
       return object : BroadcastReceiver() {
         override fun onReceive(
           context: Context?,
