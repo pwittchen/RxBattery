@@ -19,14 +19,35 @@ Contents
 Usage
 -----
 
-TBD.
+In the **Kotlin** application, you can use library as follows:
+
+```kotlin
+RxBattery
+  .observe(this)
+  .subscribeOn(Schedulers.io())
+  .observeOn(AndroidSchedulers.mainThread())
+  .subscribe { textView.text = it.toString() }
+  }
+```
+
+In the **Java** application, you can use library as follows:
+
+```java
+RxBatteryFactory
+  .observe(this)
+  .subscribeOn(Schedulers.io())
+  .observeOn(AndroidSchedulers.mainThread())
+  .subscribe(batteryState -> {
+    textView.setText(batteryState.toString());
+  });
+```
 
 Examples
 --------
 
-Exemplary Java application is located in `app-java` directory of this repository.
-
 Exemplary Kotlin application is located in `app-kotlin` directory.
+
+Exemplary Java application is located in `app-java` directory of this repository.
 
 Download
 --------
