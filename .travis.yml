@@ -18,7 +18,7 @@ android:
 jdk: oraclejdk8
 
 before_install:
-- yes | sdkmanager "platforms;android-28"
+  - yes | sdkmanager "platforms;android-28"
 
 install:
   - true
@@ -31,4 +31,4 @@ script:
 
 cache:
   directories:
-- $HOME/.m2
+    - $HOME/.m2
