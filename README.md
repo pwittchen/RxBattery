@@ -27,7 +27,6 @@ RxBattery
   .subscribeOn(Schedulers.io())
   .observeOn(AndroidSchedulers.mainThread())
   .subscribe { textView.text = it.toString() }
-  }
 ```
 
 In the **Java** application, you can use library as follows:
