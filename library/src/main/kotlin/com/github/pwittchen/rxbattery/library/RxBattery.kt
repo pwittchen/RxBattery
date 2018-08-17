@@ -10,7 +10,7 @@ import io.reactivex.Flowable
 
 class RxBattery {
   companion object {
-    const val UNKNOWN_STATUS = -1
+    const val UKNOWN = -1
 
     fun observe(context: Context): Flowable<BatteryState> {
 
@@ -26,9 +26,13 @@ class RxBattery {
               return
             }
 
-            val status: Int = intent.getIntExtra(BatteryManager.EXTRA_STATUS, UNKNOWN_STATUS)
-            val plugged: Int = intent.getIntExtra(BatteryManager.EXTRA_PLUGGED, UNKNOWN_STATUS)
-            emitter.onNext(BatteryState(status, plugged))
+            val status: Int = intent.getIntExtra(BatteryManager.EXTRA_STATUS, UKNOWN)
+            val plugged: Int = intent.getIntExtra(BatteryManager.EXTRA_PLUGGED, UKNOWN)
+            val level: Int = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, UKNOWN)
+            val temperature: Int = intent.getIntExtra(BatteryManager.EXTRA_TEMPERATURE, UKNOWN)
+            val voltage: Int = intent.getIntExtra(BatteryManager.EXTRA_VOLTAGE, UKNOWN)
+            val health: Int = intent.getIntExtra(BatteryManager.EXTRA_HEALTH, UKNOWN)
+            emitter.onNext(BatteryState(status, plugged, level, temperature, voltage, health))
           }
         }
 
