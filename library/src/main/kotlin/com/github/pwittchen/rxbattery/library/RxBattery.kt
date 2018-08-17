@@ -9,7 +9,6 @@ import io.reactivex.BackpressureStrategy.BUFFER
 import io.reactivex.Flowable
 
 class RxBattery {
-
   companion object {
     const val UNKNOWN_STATUS = -1
 
@@ -29,10 +28,8 @@ class RxBattery {
 
             val status: Int = intent.getIntExtra(BatteryManager.EXTRA_STATUS, UNKNOWN_STATUS)
             val plugged: Int = intent.getIntExtra(BatteryManager.EXTRA_PLUGGED, UNKNOWN_STATUS)
-
             emitter.onNext(BatteryState(status, plugged))
           }
-
         }
 
         context.registerReceiver(receiver, IntentFilter(Intent.ACTION_BATTERY_CHANGED))
@@ -40,10 +37,7 @@ class RxBattery {
       }, BUFFER)
 
       flowable.doOnCancel { context.unregisterReceiver(receiver) }
-
       return flowable
     }
   }
 }
-
-
