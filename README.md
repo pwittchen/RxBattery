@@ -42,6 +42,22 @@ RxBatteryFactory
   });
 ```
 
+`BatteryState` looks as follows:
+
+```kotlin
+data class BatteryState(
+  val status: Int,
+  val plugged: Int,
+  val health: Int
+  val level: Int,
+  val temperature: Int,
+  val voltage: Int,
+)
+```
+
+All `Integer` values returned by `BatteryState` object are reflected in constants of [BatteryManager](https://developer.android.com/reference/android/os/BatteryManager) class from the Android SDK.
+For `status` search constants with `BATTERY_STATUS_` prefix, for `plugged` - `BATTERY_PLUGGED_`, for `health` - `BATTERY_HEALTH_`, level represents values from 0 to 100%, voltage and temperature are quite descriptive names.
+
 Examples
 --------
 
@@ -99,6 +115,7 @@ References
 ----------
 - https://developer.android.com/training/monitoring-device-state/index.html
 - https://developer.android.com/training/monitoring-device-state/battery-monitoring.html
+- https://developer.android.com/reference/android/os/BatteryManager
 - https://developer.android.com/studio/profile/battery-historian.html
 - https://stackoverflow.com/questions/3291655/get-battery-level-and-state-in-android
 - https://stackoverflow.com/questions/25932677/proper-optimized-way-to-monitor-battery-level-in-android
