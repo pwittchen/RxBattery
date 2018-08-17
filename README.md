@@ -67,7 +67,7 @@ Exemplary Java application is located in `app-java` directory of this repository
 Download
 --------
 
-TBD.
+TBD
 
 Tests
 -----
