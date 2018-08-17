@@ -42,7 +42,7 @@ RxBatteryFactory
   });
 ```
 
-`BatteryState` looks as follows:
+`BatteryState` data class looks as follows:
 
 ```kotlin
 data class BatteryState(
