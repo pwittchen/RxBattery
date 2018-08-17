@@ -84,7 +84,7 @@ To generate test coverage report, run the following command:
 ./gradlew test jacocoTestReport
 ```
 
-*Please note*: Currently, Jacoco doesn't support Kotlin projects, so results of the test report won't be accurrate.
+**Please note**: Currently, Jacoco doesn't support Kotlin projects, so results of the test report won't be accurrate.
 
 Code style
 ----------
