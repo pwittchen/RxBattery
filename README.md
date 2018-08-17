@@ -11,6 +11,7 @@ Contents
 - [Tests](#tests)
 - [Code style](#code-style)
 - [Static code analysis](#static-code-analysis)
+- [JavaDoc](#javadoc)
 - [Changelog](#changelog)
 - [Releasing](#releasing)
 - [References](#references)
@@ -78,14 +79,6 @@ Tests are available in `library/src/test/kotlin/` directory and can be executed 
 ./gradlew test
 ```
 
-To generate test coverage report, run the following command:
-
-```
-./gradlew test jacocoTestReport
-```
-
-**Please note**: Currently, Jacoco doesn't support Kotlin projects, so results of the test report won't be accurrate.
-
 Code style
 ----------
 
@@ -100,7 +93,18 @@ Static code analysis runs Checkstyle, FindBugs, PMD, Lint, KtLint and Detekt. It
 ./gradlew check
 ```
 
-Reports from analysis are generated in library/build/reports/ directory.
+Reports from analysis are generated in `library/build/reports/` directory.
+
+JavaDoc
+-------
+
+Documentation can be generated as follows:
+
+```
+./gradlew dokka
+```
+
+Output will be generated in `library/build/javadoc`
 
 Changelog
 ---------
