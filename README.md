@@ -23,7 +23,7 @@ In the **Kotlin** application, you can use library as follows:
 
 ```kotlin
 RxBattery
-  .observe(this)
+  .observe(context)
   .subscribeOn(Schedulers.io())
   .observeOn(AndroidSchedulers.mainThread())
   .subscribe { textView.text = it.toString() }
@@ -34,7 +34,7 @@ In the **Java** application, you can use library as follows:
 
 ```java
 RxBatteryFactory
-  .observe(this)
+  .observe(context)
   .subscribeOn(Schedulers.io())
   .observeOn(AndroidSchedulers.mainThread())
   .subscribe(batteryState -> {
