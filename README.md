@@ -48,7 +48,7 @@ RxBatteryFactory
 data class BatteryState(
   val status: Int,
   val plugged: Int,
-  val health: Int
+  val health: Int,
   val level: Int,
   val temperature: Int,
   val voltage: Int,
