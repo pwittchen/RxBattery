@@ -106,6 +106,8 @@ Documentation can be generated as follows:
 
 Output will be generated in `library/build/javadoc`
 
+JavaDoc can be viewed on-line at https://pwittchen.github.io/RxBattery/library/
+
 Changelog
 ---------
 
