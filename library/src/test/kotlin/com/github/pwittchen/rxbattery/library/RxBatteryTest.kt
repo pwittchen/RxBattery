@@ -36,7 +36,7 @@ class RxBatteryTest {
     )
 
     // when
-    broadcastReceiver.onReceive(context, intent);
+    broadcastReceiver.onReceive(context, intent)
 
     // then
     verify(emitter).onNext(any(BatteryState::class.java))

@@ -40,6 +40,7 @@ class RxBattery {
           val temperature: Int = intent.getIntExtra(BatteryManager.EXTRA_TEMPERATURE, UKNOWN)
           val voltage: Int = intent.getIntExtra(BatteryManager.EXTRA_VOLTAGE, UKNOWN)
           val health: Int = intent.getIntExtra(BatteryManager.EXTRA_HEALTH, UKNOWN)
+
           emitter.onNext(BatteryState(status, plugged, health, level, temperature, voltage))
         }
       }
