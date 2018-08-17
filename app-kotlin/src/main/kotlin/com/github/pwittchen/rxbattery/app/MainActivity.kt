@@ -10,7 +10,7 @@ import io.reactivex.schedulers.Schedulers
 
 class MainActivity : AppCompatActivity() {
 
-  var batteryDisposable: Disposable? = null
+  private var batteryDisposable: Disposable? = null
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)

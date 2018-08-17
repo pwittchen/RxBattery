@@ -40,4 +40,8 @@ class RxBattery {
       return flowable
     }
   }
+
+  fun observe(context: Context): Flowable<BatteryState> {
+    return Companion.observe(context)
+  }
 }
