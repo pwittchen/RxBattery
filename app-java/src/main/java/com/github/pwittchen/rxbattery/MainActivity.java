@@ -3,7 +3,7 @@ package com.github.pwittchen.rxbattery;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
-import com.github.pwittchen.rxbattery.library.RxBatteryFactory;
+import com.github.pwittchen.rxbattery.library.RxBattery;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
   @Override protected void onResume() {
     super.onResume();
     textView = findViewById(R.id.textView);
-    batteryDisposable = RxBatteryFactory.observe(this)
+    batteryDisposable = RxBattery.observe(this)
         .subscribeOn(Schedulers.io())
         .observeOn(AndroidSchedulers.mainThread())
         .subscribe(state -> {

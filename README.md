@@ -33,7 +33,7 @@ RxBattery
 In the **Java** application, you can use library as follows:
 
 ```java
-RxBatteryFactory
+RxBattery
   .observe(context)
   .subscribeOn(Schedulers.io())
   .observeOn(AndroidSchedulers.mainThread())

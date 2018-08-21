@@ -13,7 +13,7 @@ class RxBattery {
   companion object {
     const val UNKNOWN = -1
 
-    fun observe(context: Context): Flowable<BatteryState> {
+    @JvmStatic fun observe(context: Context): Flowable<BatteryState> {
 
       var receiver: BroadcastReceiver? = null
 
