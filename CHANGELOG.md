@@ -12,6 +12,7 @@ v. 0.1.0
     - `fun plugged(): Plugged { ... }`
     - `fun health(): Health { ... }`
   - added `@JvmStatic` annotation to `fun observe(context: Context): Flowable<BatteryState>` method in `RxBattery` class in order to call static method from Java modules without need to explicitly call `Companion` object
+  - added KotlinX to sample Kotlin app
   - added project logo created by @Yasujizr
 - **updates**
   - fixed typo in const val in `RxBattery` class
