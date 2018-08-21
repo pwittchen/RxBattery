@@ -7,7 +7,7 @@ v. 0.1.0
 
 - fixed typo in const val in `RxBattery` class
 - added the following enums: `Status`, `Plugged`, `Health`
-- **API-breaking change**: In `BatteryState` data class renamed variable `status` to `statusCode`, `plugged` to `pluggedCode` and `health` to `healthCode`
+- **API-breaking change**: In `BatteryState` data class, renamed variable `status` to `statusCode`, `plugged` to `pluggedCode` and `health` to `healthCode`
 - **API-breaking change**: Removed `RxBatteryFactory` class
 - added the following methods to `BatteryState` data class:
   - `fun status(): Status { ... }`
