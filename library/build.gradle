@@ -111,7 +111,7 @@ buildscript {
 
   dependencies {
     classpath deps.kotlingradleplugin
-  classpath deps.detekt
+    classpath deps.detekt
     classpath deps.ktlintgradle
     classpath deps.dokka
   }
