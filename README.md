@@ -59,9 +59,7 @@ data class BatteryState(
 }
 ```
 
-All `Integer` values returned by `BatteryState` object are reflected in constants of [`BatteryManager`](https://developer.android.com/reference/android/os/BatteryManager) class from the Android SDK.
-
-Enums `Status`, `Plugged` and `Health` represents battery state translated from integer codes from `BatteryManager` class.
+All `Integer` values returned by `BatteryState` object are reflected in constants of [`BatteryManager`](https://developer.android.com/reference/android/os/BatteryManager) class from the Android SDK. Enums `Status`, `Plugged` and `Health` represents battery state translated from integer codes from `BatteryManager` class.
 
 Examples
 --------
