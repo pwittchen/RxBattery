@@ -2,4 +2,5 @@ $dokka.format:html
 $dokka.linkExtension:html
 
 com.github.pwittchen.rxbattery.library
+com.github.pwittchen.rxbattery.library.state
 io.reactivex.android
