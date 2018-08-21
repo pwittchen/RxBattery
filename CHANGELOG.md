@@ -3,7 +3,7 @@ CHANGELOG
 
 v. 0.1.0
 --------
-*?*
+*21 Aug 2018*
 
 - **additions**
   - added the following enums: `Status`, `Plugged`, `Health`
