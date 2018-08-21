@@ -52,5 +52,6 @@ buildscript {
 
   dependencies {
     classpath deps.kotlingradleplugin
+    classpath deps.kotlinx
   }
 }

@@ -2,11 +2,11 @@ package com.github.pwittchen.rxbattery.app
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.widget.TextView
 import com.github.pwittchen.rxbattery.library.RxBattery
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
+import kotlinx.android.synthetic.main.activity_main.textView
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
 
   override fun onResume() {
     super.onResume()
-    val textView: TextView = findViewById(R.id.textView)
     batteryDisposable = RxBattery.observe(this)
       .subscribeOn(Schedulers.io())
       .observeOn(AndroidSchedulers.mainThread())
