@@ -24,8 +24,11 @@ public class MainActivity extends AppCompatActivity {
     batteryDisposable = RxBatteryFactory.observe(this)
         .subscribeOn(Schedulers.io())
         .observeOn(AndroidSchedulers.mainThread())
-        .subscribe(batteryState -> {
-          textView.setText(batteryState.toString());
+        .subscribe(state -> {
+          textView.setText(String.format(
+              "info %s, status: %s, plugged: %s, health: %s",
+              state.toString(), state.status(), state.plugged(), state.health()
+          ));
         });
   }
 

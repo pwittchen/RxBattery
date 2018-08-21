@@ -4,6 +4,7 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
   compileSdkVersion rootProject.ext.compileSdkVersion
+  buildToolsVersion rootProject.ext.buildToolsVersion
 
   defaultConfig {
     applicationId "com.github.pwittchen.rxbattery.app"
@@ -14,18 +15,21 @@ android {
 
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
-
   buildTypes {
     release {
       minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
-
   sourceSets {
     androidTest.java.srcDirs += "src/androidTest/kotlin"
     main.java.srcDirs += "src/main/kotlin"
     test.java.srcDirs += "src/test/kotlin"
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
   }
 }
 

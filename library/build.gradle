@@ -55,6 +55,11 @@ android {
   lintOptions {
     abortOnError false
   }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
 }
 
 jacocoAndroidUnitTestReport {
@@ -87,7 +92,6 @@ dependencies {
   api deps.rxandroid2
   api deps.rxkotlin2
   implementation deps.supportannotations
-
   testImplementation deps.junit
   testImplementation deps.truth
   testImplementation deps.robolectric

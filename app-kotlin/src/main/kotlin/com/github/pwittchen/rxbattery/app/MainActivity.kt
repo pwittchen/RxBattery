@@ -23,7 +23,12 @@ class MainActivity : AppCompatActivity() {
     batteryDisposable = RxBattery.observe(this)
       .subscribeOn(Schedulers.io())
       .observeOn(AndroidSchedulers.mainThread())
-      .subscribe { textView.text = it.toString() }
+      .subscribe {
+        textView.text = String.format(
+          "info: %s, status: %s, plugged: %s, health: %s",
+          it.toString(), it.status(), it.plugged(), it.health()
+        )
+      }
   }
 
   override fun onPause() {

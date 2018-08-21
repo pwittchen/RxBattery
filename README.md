@@ -46,17 +46,22 @@ RxBatteryFactory
 
 ```kotlin
 data class BatteryState(
-  val status: Int,
-  val plugged: Int,
-  val health: Int,
+  val statusCode: Int,
+  val pluggedCode: Int,
+  val healthCode: Int,
   val level: Int,
   val temperature: Int,
   val voltage: Int,
-)
+) {
+  fun status(): Status { ... }
+  fun plugged(): Plugged { ... }
+  fun health(): Health { ... }
+}
 ```
 
 All `Integer` values returned by `BatteryState` object are reflected in constants of [`BatteryManager`](https://developer.android.com/reference/android/os/BatteryManager) class from the Android SDK.
-For `status` search constants with `BATTERY_STATUS_` prefix, for `plugged` - `BATTERY_PLUGGED_`, for `health` - `BATTERY_HEALTH_`, `level` represents values from 0 to 100%, `voltage` and `temperature` are quite descriptive names.
+
+Enums `Status`, `Plugged` and `Health` represents battery state translated from integer codes from `BatteryManager` class.
 
 Examples
 --------
