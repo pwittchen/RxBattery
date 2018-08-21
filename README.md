@@ -78,7 +78,7 @@ You can depend on the library through Gradle:
 
 ```groovy
 dependencies {
-  implementation 'com.github.pwittchen:rxbattery:0.0.1'
+  implementation 'com.github.pwittchen:rxbattery:0.1.0'
 }
 ```
 
