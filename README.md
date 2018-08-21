@@ -17,6 +17,7 @@ Contents
 - [Changelog](#changelog)
 - [Releasing](#releasing)
 - [References](#references)
+- [Credits](#credits)
 - [License](#license)
 
 Usage
@@ -139,6 +140,11 @@ References
 - https://stackoverflow.com/questions/25932677/proper-optimized-way-to-monitor-battery-level-in-android
 - https://stackoverflow.com/questions/32608505/broadcast-receiver-monitoring-the-battery-level-and-charging-state
 - https://github.com/jaredsburrows/android-gradle-kotlin-app-template
+
+Credits
+-------
+
+Logo of the project was created by [@Yasujizr](https://github.com/Yasujizr).
 
 License
 -------
