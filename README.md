@@ -69,8 +69,6 @@ Examples
 
 Exemplary Kotlin application is located in `app-kotlin` directory.
 
-Exemplary Java application is located in `app-java` directory of this repository.
-
 Download
 --------
 
