@@ -4,11 +4,11 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import com.google.common.truth.Truth.assertThat
-import com.nhaarman.mockitokotlin2.verify
 import io.reactivex.FlowableEmitter
 import org.junit.Test
 import org.mockito.ArgumentMatchers.any
 import org.mockito.Mockito.mock
+import org.mockito.Mockito.verify
 
 class RxBatteryTest {
 
