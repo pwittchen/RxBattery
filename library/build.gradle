@@ -63,7 +63,6 @@ android {
 
 jacoco {
   toolVersion = "0.7.9"
-  //  reportsDir = file("$buildDir/reports")
 }
 
 task jacocoTestReport(type:JacocoReport, dependsOn: "testDebugUnitTest") {
