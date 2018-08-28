@@ -1,6 +1,6 @@
 <p align="center"><img src="logo.png" alt="RxBattery" height="150px"></p>
 
-RxBattery [![Build Status](https://travis-ci.org/pwittchen/RxBattery.svg?branch=master)](https://travis-ci.org/pwittchen/RxBattery) ![Maven Central](https://img.shields.io/maven-central/v/com.github.pwittchen/rxbattery.svg?style=flat)
+RxBattery [![Build Status](https://img.shields.io/travis/pwittchen/RxBattery.svg?branch=master&style=flat-square)](https://travis-ci.org/pwittchen/RxBiometric)  ![Maven Central](https://img.shields.io/maven-central/v/com.github.pwittchen/rxbattery.svg?style=flat-square)
 =========
 Android library monitoring battery state of the device with RxJava and RxKotlin
 
