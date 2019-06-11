@@ -22,7 +22,7 @@ ext.deps = [ rxjava2              : 'io.reactivex.rxjava2:rxjava:2.2.9',
              mockitokotlin        : 'com.nhaarman.mockitokotlin2:mockito-kotlin:2.1.0',
              dokka                : 'org.jetbrains.dokka:dokka-gradle-plugin:0.9.18',
              detekt               : "gradle.plugin.io.gitlab.arturbosch.detekt:detekt-gradle-plugin:$detektVersion",
-             ktlintgradle         : "gradle.plugin.org.jlleitschuh.gradle:ktlint-gradle:4.1.0",
+             ktlintgradle         : "gradle.plugin.org.jlleitschuh.gradle:ktlint-gradle:6.2.1",
              kotlinx              : "org.jetbrains.kotlin:kotlin-android-extensions:$kotlinVersion",
              kotlinstdlib         : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
              kotlingradleplugin   : "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion" ]
