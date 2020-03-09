@@ -2,9 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'jacoco'
 apply plugin: 'io.gitlab.arturbosch.detekt'
-apply plugin: 'org.jlleitschuh.gradle.ktlint'
 apply plugin: 'org.jetbrains.dokka'
 apply from: '../config/quality.gradle'
 apply from: '../maven_push.gradle'
@@ -14,6 +12,7 @@ android {
   buildToolsVersion rootProject.ext.buildToolsVersion
 
   defaultConfig {
+    multiDexEnabled true
     minSdkVersion rootProject.ext.minSdkVersion
     targetSdkVersion rootProject.ext.compileSdkVersion
     versionCode 1
@@ -47,61 +46,10 @@ android {
     abortOnError false
   }
 
-  testOptions {
-    unitTests.all {
-      jacoco {
-        includeNoLocationClasses = true
-      }
-    }
-  }
-
   compileOptions {
     sourceCompatibility JavaVersion.VERSION_1_8
     targetCompatibility JavaVersion.VERSION_1_8
   }
-}
-
-jacoco {
-  toolVersion = "0.7.9"
-}
-
-task jacocoTestReport(type:JacocoReport, dependsOn: "testDebugUnitTest") {
-  group = "Reporting"
-  description = "Generate Jacoco coverage reports for Debug build"
-
-  reports {
-    xml.enabled = true
-    html.enabled = true
-  }
-
-  // what to exclude from coverage report
-  // UI, "noise", generated classes, platform classes, etc.
-  def excludes = [
-      '**/R.class',
-      '**/R$*.class',
-      '**/*$ViewInjector*.*',
-      '**/BuildConfig.*',
-      '**/Manifest*.*',
-      '**/*Test*.*',
-      'android/**/*.*',
-      '**/*Fragment.*',
-      '**/*Activity.*'
-  ]
-  // generated classes
-  classDirectories = fileTree(
-      dir: "$buildDir/intermediates/classes/debug",
-      excludes: excludes
-  ) + fileTree(
-      dir: "$buildDir/tmp/kotlin-classes/debug",
-      excludes: excludes
-  )
-
-  // sources
-  sourceDirectories = files([
-      android.sourceSets.main.java.srcDirs,
-      "src/main/kotlin"
-  ])
-  executionData = files("$buildDir/jacoco/testDebugUnitTest.exec")
 }
 
 detekt {
@@ -111,11 +59,6 @@ detekt {
     config = "$projectDir/detekt.yml"
     filters = ".*test.*,.*/resources/.*,.*/tmp/.*"
   }
-}
-
-ktlint {
-  verbose = true
-  reporters = ["CHECKSTYLE", "PLAIN"]
 }
 
 dokka {
@@ -147,7 +90,6 @@ buildscript {
 
   dependencies {
     classpath deps.detekt
-    classpath deps.ktlintgradle
     classpath deps.dokka
   }
 }

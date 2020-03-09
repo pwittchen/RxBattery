@@ -16,7 +16,7 @@
 package com.github.pwittchen.rxbattery.app
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.github.pwittchen.rxbattery.library.RxBattery
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
